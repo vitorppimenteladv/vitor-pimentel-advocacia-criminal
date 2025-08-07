@@ -1,0 +1,230 @@
+/* --- RESPONSIVIDADE REFINADA --- */
+
+/* Desktop styles - aplicadas apenas em telas maiores */
+@media (min-width: 769px) {
+    #sobre .flex-container, #atuacao .flex-container {
+        text-align: left;
+        align-items: flex-start;
+    }
+    #sobre .text-content { padding-right: 25px; }
+    #atuacao .flex-container { flex-direction: row-reverse; }
+    #atuacao .text-content { padding-left: 25px; }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --titulo-principal: 1.9rem;
+        --titulo-secundario: 1.05rem;
+        --texto-corpo: 0.95rem;
+        --texto-corpo-pequeno: 0.9rem;
+        --espacamento-container: 50px;
+        --card-largura-min: 240px;
+        --card-padding: 20px 18px;
+        --logo-hero-size: 322px;           /* Tamanho da logo principal (15% maior em mobile) */
+        --logo-header-size: 42px;
+    }
+
+    /* Ajustar header para mobile */
+    header {
+        padding: 8px 20px;
+        height: 60px;
+        min-height: 60px;
+    }
+
+    /* Logo menor em mobile */
+    .logo img {
+        height: 38px;
+    }
+
+    /* Ícones sociais menores em mobile */
+    .header-icon-link {
+        height: 36px;
+        width: 36px;
+    }
+
+    .header-icon-link img {
+        height: 20px;
+        width: 20px;
+    }
+
+    /* Menu toggle menor em mobile */
+    .menu-toggle {
+        height: 36px;
+        width: 36px;
+        padding: 6px;
+    }
+
+    .menu-toggle span {
+        width: 18px;
+    }
+
+    /* Theme switch menor em mobile */
+    .theme-switch {
+        width: 44px;
+        height: 24px;
+        margin-left: 10px;
+    }
+
+    .theme-switch::before {
+        width: 20px;
+        height: 20px;
+        transform: translateX(18px);
+    }
+
+    [data-theme="dark"] .theme-switch::before {
+        transform: translateX(0px);
+    }
+
+    /* Menu em mobile ocupa tela inteira */
+    .nav-menu {
+        width: 100%;
+    }
+
+    /* Ajustes específicos para container em mobile */
+    .container {
+        padding: var(--espacamento-container) 20px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .flex-container img {
+        margin-bottom: 25px;
+        max-width: 85%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Garantir alinhamento à esquerda e justificar parágrafos */
+    #sobre .text-content, #atuacao .text-content {
+        padding: 0 10px;
+        text-align: left;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #sobre .text-content p,
+    #atuacao .text-content p {
+        text-align: justify;
+    }
+
+    #atuacao .flex-container {
+        flex-direction: column;
+    }
+
+    /* Ajustes específicos para seção de áreas em mobile */
+    #areas { padding: 60px 16px; }
+    .tema-grupo {
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 4px;
+    }
+    .tema-header {
+        padding: 16px 18px;
+        margin: 0;
+    }
+    .tema-header h4 { font-size: 1rem; }
+    .tema-content {
+        margin: 0;
+    }
+
+    /* Grid de atuação com espaçamentos otimizados */
+    .atuacao-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 20px 16px;
+    }
+
+    /* Cards com padding reduzido em mobile */
+    .area-card {
+        padding: 18px 16px;
+        margin: 0;
+    }
+
+    /* Social links mais compactos */
+    .header-actions {
+        gap: 8px;
+    }
+
+    /* Ajustes para publicações em mobile */
+    .publicacoes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    #publicacoes p {
+        margin-bottom: 40px;
+    }
+
+    /* Responsividade do footer */
+    footer {
+        padding: 50px 16px 30px 16px;
+    }
+
+    .footer-socials {
+        margin-bottom: 35px;
+        gap: 16px;
+    }
+
+    .footer-socials-icons {
+        gap: 14px;
+    }
+
+    .footer-icon-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-icon-link img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .copyright {
+        padding-top: 25px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Media query adicional para telas muito pequenas */
+@media (max-width: 480px) {
+    .container {
+        padding: var(--espacamento-container) 16px;
+    }
+
+    /* Melhor alinhamento em telas muito pequenas */
+    #sobre .text-content, #atuacao .text-content {
+        padding: 0 8px;
+        text-align: left;
+    }
+
+    .flex-container img {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #areas { padding: 50px 12px; }
+    .tema-grupo { padding: 0 2px; }
+    .tema-header { padding: 14px 16px; }
+    .atuacao-grid { padding: 16px 12px; gap: 14px; }
+    .area-card { padding: 16px 14px; }
+
+    /* Menu ainda mais compacto em telas muito pequenas */
+    .nav-menu {
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 15px 25px;
+        font-size: 0.95rem;
+    }
+
+    .nav-contact {
+        padding: 25px 25px 15px 25px;
+    }
+}

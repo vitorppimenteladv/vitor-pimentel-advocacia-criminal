@@ -1,0 +1,54 @@
+/* === PAINEL DE CONTROLE VISUAL === */
+/* Centralize todas as configurações de design aqui para facilitar a manutenção. */
+/* Altere estes valores para customizar o site de forma rápida e consistente. */
+
+:root {
+    /* TEMA CLARO (PADRÃO) */
+    --cor-primaria: #FFFFFF;
+    --cor-secundaria: #F8F9FA;
+    --cor-texto: #2C3E50;
+    --cor-destaque: #3498DB;
+    --cor-texto-corpo: #5A6C7D;
+    --cor-borda: #E1E8ED;
+    --cor-card-bg: #FFFFFF;
+    --cor-shadow: rgba(0, 0, 0, 0.1);
+
+    /* TIPOGRAFIA - CONTROLES DE TAMANHO */
+    --titulo-principal: 2.2rem;        /* H2 - Ajuste aqui o tamanho dos títulos principais */
+    --titulo-secundario: 1.15rem;      /* H3 - Ajuste aqui o tamanho dos subtítulos */
+    --texto-corpo: 1rem;               /* P - Ajuste aqui o tamanho do texto corrido */
+    --texto-corpo-pequeno: 0.95rem;    /* Texto menor para descrições */
+
+    /* ESPAÇAMENTOS - CONTROLES DE LAYOUT */
+    --espacamento-container: 70px;      /* Padding vertical das seções */
+    --espacamento-elementos: 18px;      /* Margem entre elementos */
+    --espacamento-cards: 20px;          /* Gap entre cards */
+
+    /* CARDS - CONTROLES DE DIMENSÕES */
+    --card-largura-min: 260px;         /* Largura mínima dos cards */
+    --card-padding: 25px 20px;         /* Padding interno dos cards */
+    --card-border-radius: 8px;         /* Bordas arredondadas */
+    --card-icon-size: 45px;            /* Tamanho do ícone */
+
+    /* LOGO E IMAGENS */
+    --logo-hero-size: 368px;           /* Tamanho da logo principal (15% maior que 320px) */
+    --logo-header-size: 50px;          /* Tamanho da logo no header */
+
+    /* ANIMAÇÕES E TRANSIÇÕES */
+    --transition-speed: 0.2s;
+    --transition-timing: ease;
+}
+
+/* TEMA ESCURO */
+[data-theme="dark"] {
+    --cor-primaria: #121212;
+    --cor-secundaria: #1A1A1A;
+    --cor-texto: #FFFFFF;
+    --cor-destaque: #D4AF37;
+    --cor-texto-corpo: #B0B0B0;
+    --cor-borda: #2C2C2C;
+    --cor-card-bg: #1F1F1F;
+    --cor-shadow: rgba(0, 0, 0, 0.4);
+    --cor-dropdown-bg: #2A2A2A;  /* Cor específica para dropdowns no escuro */
+    --cor-btn-primary-text: #000;
+}
